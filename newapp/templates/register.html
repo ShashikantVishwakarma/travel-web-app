@@ -1,0 +1,115 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <title>Hello, world!</title>-->
+<!--  <meta charset="UTF-8" />-->
+<!--  <meta name="viewport" content="width=device-width,initial-scale=1" />-->
+<!--  <meta name="description" content="" />-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="register" method="post">-->
+<!--  {% csrf_token %}-->
+<!--  <input type="text" name="first_name" placeholder="first name"><br>-->
+<!--  <input type="text" name="last_name" placeholder="last name"><br>-->
+<!--  <input type="text" name="username" placeholder="username"><br>-->
+<!--  <input type="email" name="email" placeholder="email"><br>-->
+<!--  <input type="password" name="password1" placeholder="password"><br>-->
+<!--  <input type="password" name="password2" placeholder="confirm password"><br>-->
+<!--  <input type="submit">-->
+<!--</form>-->
+<!--<div>-->
+<!--  {% for message in messages %}-->
+<!--  <h3>{{messages}}</h3>-->
+<!--  {% endfor %}-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+<style>
+
+    .note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+body{
+background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+</style>
+
+<body>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register-form">
+            <div class="form">
+                <div class="note">
+                    <h1>!!! Register Here !!!</h1>
+                </div>
+
+                <div class="form-content">
+                    <form action="register" method="post">
+                        {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your first Name *"  name="first_name" >
+                            </div>
+                             <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your last Name *"  name="last_name" >
+                            </div>
+                             <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Username*"  name="username" >
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="email *"  name="email" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Your Password *"  name="password1" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Confirm Password *" name="password2" value=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btnSubmit">Submit</button>
+                    </form>
+                    <div>
+  {% for message in messages %}
+  <h3>{{messages}}</h3>
+  {% endfor %}
+                </div>
+            </div>
+        </div>
+</div>
+</body>

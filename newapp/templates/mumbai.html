@@ -1,0 +1,124 @@
+
+
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hello, world!</title>
+  </head>
+  <style>
+    body{
+    background-image:url('https://www.pixelstalk.net/wp-content/uploads/2016/08/HD-World-Travel-Desktop-Background.jpg');
+    }
+    h2{
+    color:cyan;
+    font-style: italic;
+    }
+    h3{
+    color:orange;
+    }
+    h4{
+    color:yellow;
+    }
+
+  </style>
+  <body>
+  <center>
+    <br>
+
+
+    <img src="{{data.img.url}}" class="img-fluid" alt="Responsive image" width="350" border="3px solid"><br><br>
+
+  <div><h2>{{data.name}}</h2></div><br>
+  <div><h3> Rs. {{data.price}} /-</h3></div><br>
+    <div><h4>{{data.desc}}</h4></div><br>
+    <div class="container">
+
+    <form class="well form-horizontal" action="/" method="post"  id="contact_form">
+      {% csrf_token %}
+<fieldset>
+
+<!-- Form Name -->
+<legend><center><h2><b>!! Fill Ur Details Here !!</b></h2></center></legend><br>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="firstname" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="lastname" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Location</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="address" placeholder="location" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Contact No.</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="contact" placeholder="(+91)" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br><button type="submit" class="btn btn-warning" >Buy<span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+
+  </center>
+  </body>
+</html>
